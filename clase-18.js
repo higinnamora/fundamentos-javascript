@@ -1,3 +1,5 @@
+// Filtrar un array
+
 var sacha = {
   nombre: 'Sacha',
   apellido: 'Lifszyc',
@@ -34,9 +36,11 @@ var paula = {
   altura: 1.76
 }
 
+const esAlta = ({ altura }) => {
+  return persona.altura > 1.8
+}
+
 var personas = [sacha, alan, martin, dario, vicky, paula]
 
-for (var i = 0; i < personas.length; i++) {
-  var persona = personas[i]
-  console.log(`${persona.nombre} mide ${persona.altura}mts`)
-}
+var personasAltas = personas.filter(esAlta)
+
